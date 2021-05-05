@@ -569,16 +569,20 @@ header .header-content .octopus-text {
 footer {
   background-color: #262C30;
   height: 90vh;
-  padding-top: 10vh;
+  padding: 10vh 8vw;
+  margin-top: 5vh;
 }
 footer .top-footer {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+footer .top-footer .say-hello {
+  grid-column: span 8;
 }
 footer .top-footer .say-hello a {
   font-family: "Merriweather";
   color: white;
-  font-size: 6vw;
+  font-size: 5.5vw;
   text-decoration: none;
 }
 footer .top-footer .say-hello a:hover {
@@ -587,10 +591,10 @@ footer .top-footer .say-hello a:hover {
 }
 footer .top-footer .socmed {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
-  width: 20vw;
-  padding-bottom: 2vh;
+  width: 16vw;
+  grid-column: span 4;
 }
 footer .top-footer .socmed .socmed-icon {
   position: relative;
@@ -601,10 +605,10 @@ footer .top-footer .socmed .socmed-icon {
 }
 footer .top-footer .socmed svg {
   fill: white;
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
-footer .top-footer .socmed span:before {
+footer .top-footer .socmed span::before {
   position: absolute;
   content: "•";
   color: yellow;
@@ -617,50 +621,133 @@ footer .top-footer .socmed span:before {
 footer .top-footer .socmed-icon:hover svg {
   fill: yellow;
 }
-footer .top-footer .socmed-icon:hover span:before {
+footer .top-footer .socmed-icon:hover span::before {
   display: block;
 }
 footer .middle-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: 8vh;
 }
 footer .middle-footer .locations {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  grid-column: span 5;
 }
 footer .middle-footer .locations .all-locations {
   display: flex;
-  justify-content: center;
+  margin-top: 1vh;
 }
-footer .middle-footer .locations .all-locations .locations-type {
+footer .middle-footer .locations .all-locations .locations-type-1 {
   display: flex;
   flex-direction: column;
+  line-height: 2.5;
+  font-size: 1vw;
+}
+footer .middle-footer .locations .all-locations .locations-type-1 span::before {
+  position: absolute;
+  content: "•";
+  color: yellow;
+  font-size: 1.2vw;
+  left: -1.5vw;
+  bottom: -0.4vh;
+  display: none;
+}
+footer .middle-footer .locations .all-locations .locations-type-2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8vw;
+  line-height: 2.5;
+  font-size: 1vw;
+}
+footer .middle-footer .locations .all-locations .locations-type-2 span::before {
+  position: absolute;
+  content: "•";
+  color: yellow;
+  font-size: 1.2vw;
+  left: -1.5vw;
+  bottom: -0.4vh;
+  display: none;
+}
+footer .middle-footer .locations .all-locations .dot {
+  position: relative;
+  width: 8vw;
+}
+footer .middle-footer .locations .all-locations .dot:hover a {
+  color: yellow;
+}
+footer .middle-footer .locations .all-locations .dot:hover span::before {
+  display: inline;
 }
 footer .middle-footer .network {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  grid-column: span 3;
 }
 footer .middle-footer .network .all-networks {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  line-height: 2.5;
+  margin-top: 1vh;
+}
+footer .middle-footer .network .all-networks span::before {
+  position: absolute;
+  content: "•";
+  color: yellow;
+  font-size: 1.2vw;
+  left: -1.5vw;
+  bottom: -0.5vh;
+  display: none;
+}
+footer .middle-footer .network .dot {
+  position: relative;
+  width: 8vw;
+}
+footer .middle-footer .network .dot:hover a {
+  color: yellow;
+}
+footer .middle-footer .network .dot:hover span::before {
+  display: inline;
+}
+footer .middle-footer .jobs {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+}
+footer .middle-footer .jobs .jobs-desc {
+  width: 23vw;
+  margin-top: 1vh;
 }
 footer .middle-footer .jobs .jobs-desc span {
   font-family: "Merriweather";
   font-style: italic;
-  font-size: 1vw;
-  font-weight: 600;
+  font-size: 1.2vw;
+  line-height: 4vh;
   color: white;
 }
-footer .middle-footer .jobs .see-jobs span {
+footer .middle-footer .jobs .see-jobs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1vw solid white;
+  width: 8vw;
+  height: 7vh;
+  margin-top: 4vh;
+}
+footer .middle-footer .jobs .see-jobs a {
   font-family: "Montserrat";
-  font-weight: 700;
-  font-size: 0.8vw;
+  font-weight: 600;
+  font-size: 0.7vw;
   color: white;
+  letter-spacing: 0.1vw;
+}
+footer .middle-footer .jobs .see-jobs:hover {
+  cursor: pointer;
+  background-color: white;
+}
+footer .middle-footer .jobs .see-jobs:hover a {
+  color: #262C30;
 }
 footer .middle-footer a {
   text-decoration: none;
@@ -671,7 +758,35 @@ footer .middle-footer .text span {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 0.8vw;
+  letter-spacing: 0.1vw;
   color: white;
+}
+footer .bottom-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+  margin-top: 7vh;
+  border-top: 0.3vw solid #535e64;
+}
+footer .bottom-footer span {
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+  letter-spacing: 0.1vw;
+}
+footer .bottom-footer a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+  letter-spacing: 0.1vw;
+}
+footer .bottom-footer a:hover {
+  color: yellow;
+  text-decoration: underline;
 }
 
 @font-face {

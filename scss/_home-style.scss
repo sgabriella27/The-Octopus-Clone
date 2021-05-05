@@ -657,18 +657,20 @@ header {
 footer {
   background-color: #262C30;
   height: 90vh;
-  padding-top: 10vh;
+  padding: 10vh 8vw;
+  margin-top: 5vh;
 
   .top-footer {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 
     .say-hello {
+      grid-column: span 8;
 
       a {
         font-family: "Merriweather";
         color: white;
-        font-size: 6vw;
+        font-size: 5.5vw;
         text-decoration: none;
       }
 
@@ -681,10 +683,10 @@ footer {
 
     .socmed {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: flex-end;
-      width: 20vw;
-      padding-bottom: 2vh;
+      width: 16vw;
+      grid-column: span 4;
 
       .socmed-icon {
         position: relative;
@@ -696,11 +698,11 @@ footer {
 
       svg {
         fill: white;
-        width: 2rem;
-        height: 2rem;
+        width: 1.8rem;
+        height: 1.8rem;
       }
 
-      span:before {
+      span::before {
         position: absolute;
         content: "\2022";
         color: yellow;
@@ -717,65 +719,160 @@ footer {
       fill: yellow;
     }
 
-    .socmed-icon:hover span:before {
+    .socmed-icon:hover span::before {
       display: block;
     }
   }
 
   .middle-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 8vh;
 
     .locations {
       display: flex;
-      justify-content: center;
       flex-direction: column;
+      grid-column: span 5;
 
       .all-locations {
         display: flex;
-        justify-content: center;
+        margin-top: 1vh;
 
-        .locations-type {
+        .locations-type-1 {
           display: flex;
           flex-direction: column;
+          line-height: 2.5;
+          font-size: 1vw;
+
+          span::before {
+            position: absolute;
+            content: "\2022";
+            color: yellow;
+            font-size: 1.2vw;
+            left: -1.5vw;
+            bottom: -0.4vh;
+            display: none;
+          }
+
         }
+
+        .locations-type-2 {
+          display: flex;
+          flex-direction: column;
+          margin-left: 8vw;
+          line-height: 2.5;
+          font-size: 1vw;
+
+          span::before {
+            position: absolute;
+            content: "\2022";
+            color: yellow;
+            font-size: 1.2vw;
+            left: -1.5vw;
+            bottom: -0.4vh;
+            display: none;
+          }
+
+        }
+
+        .dot {
+          position: relative;
+          width: 8vw;
+        }
+
+        .dot:hover a {
+          color: yellow;
+        }
+
+        .dot:hover span::before {
+          display: inline;
+        }
+
       }
 
     }
 
     .network {
       display: flex;
-      justify-content: center;
       flex-direction: column;
+      grid-column: span 3;
 
       .all-networks {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        line-height: 2.5;
+        margin-top: 1vh;
+
+        span::before {
+          position: absolute;
+          content: "\2022";
+          color: yellow;
+          font-size: 1.2vw;
+          left: -1.5vw;
+          bottom: -0.5vh;
+          display: none;
+        }
+
+      }
+
+      .dot {
+        position: relative;
+        width: 8vw;
+      }
+
+      .dot:hover a {
+        color: yellow;
+      }
+
+      .dot:hover span::before {
+        display: inline;
       }
 
     }
 
     .jobs {
+      display: flex;
+      flex-direction: column;
+      grid-column: span 2;
 
       .jobs-desc {
+        width: 23vw;
+        margin-top: 1vh;
+
         span {
           font-family: "Merriweather";
           font-style: italic;
-          font-size: 1vw;
-          font-weight: 600;
+          font-size: 1.2vw;
+          line-height: 4vh;
           color: white;
         }
       }
 
       .see-jobs {
-        span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.1vw solid white;
+        width: 8vw;
+        height: 7vh;
+        margin-top: 4vh;
+
+        a {
           font-family: "Montserrat";
-          font-weight: 700;
-          font-size: 0.8vw;
+          font-weight: 600;
+          font-size: 0.7vw;
           color: white;
+          letter-spacing: 0.1vw;
+        }
+      }
+
+      .see-jobs:hover {
+        cursor: pointer;
+        background-color: white;
+
+        a {
+          color: #262C30;
         }
       }
     }
@@ -792,8 +889,41 @@ footer {
         font-family: "Montserrat";
         font-weight: 700;
         font-size: 0.8vw;
+        letter-spacing: 0.1vw;
         color: white;
       }
+    }
+
+  }
+
+  .bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    margin-top: 7vh;
+    border-top: 0.3vw solid #535e64;
+
+    span {
+      color: white;
+      font-family: "Montserrat";
+      font-weight: 700;
+      font-size: 0.8vw;
+      letter-spacing: 0.1vw;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-family: "Montserrat";
+      font-weight: 700;
+      font-size: 0.8vw;
+      letter-spacing: 0.1vw;
+    }
+
+    a:hover {
+      color: yellow;
+      text-decoration: underline;
     }
 
   }
