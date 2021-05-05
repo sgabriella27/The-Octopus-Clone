@@ -1,0 +1,695 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap");
+::selection {
+  background: yellow;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+nav img {
+  width: 5vw;
+}
+nav .register-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 0.3vw;
+  width: 8vw;
+  height: 5vh;
+}
+nav .register-button a {
+  color: white;
+  font-family: "Sora";
+  text-decoration: none;
+  text-decoration: none;
+}
+
+.register-button:hover {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 90.5vh;
+}
+header .video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 67vh;
+  z-index: -1;
+}
+header .video video {
+  width: 100%;
+  height: auto;
+}
+header .header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 40vw;
+  height: 25vh;
+}
+header .header-content .octopus-title {
+  font-family: "Merriweather";
+  font-size: 4vw;
+}
+header .header-content .octopus-text {
+  font-family: "Merriweather";
+  font-style: italic;
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+.bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("../assets/images/topography.svg");
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+.category-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.category-container .category {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 0.2vw solid black;
+  border-bottom: 0.2vw solid black;
+  background-color: white;
+  height: 8vh;
+  width: 80vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+.category-container .category a {
+  text-decoration: none;
+  color: black;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+}
+.category-container .category a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.9vh;
+  background: yellow;
+  transition: width 0.3s;
+  margin-top: -0.9vh;
+}
+.category-container .category a:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.middle-container {
+  display: flex;
+  justify-content: center;
+}
+
+.the-latest {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+  width: 51.5vw;
+}
+.the-latest .the-latest-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: yellow;
+  width: 51.5vw;
+  height: 6vh;
+  margin-bottom: 3vh;
+}
+.the-latest .the-latest-text span {
+  color: black;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+}
+.the-latest .the-latest-content {
+  width: 51.5vw;
+}
+.the-latest .the-latest-content .latest-image-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/the-latest.jpg");
+  background-size: 100%;
+  background-position: center;
+  height: 53vh;
+  transition: all 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+.the-latest .the-latest-content .latest-image-content:hover {
+  background-size: 110%;
+}
+.the-latest .the-latest-content .latest-text-content {
+  margin-top: 2vh;
+  padding-bottom: 4vh;
+  border-bottom: 0.6vh solid black;
+}
+.the-latest .the-latest-content .latest-text-content .blog {
+  color: #8C9090;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+}
+.the-latest .the-latest-content .latest-text-content .author {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+}
+.the-latest .the-latest-content .latest-text-content p {
+  margin-top: 2vh;
+  width: 35vw;
+}
+.the-latest .the-latest-content .latest-text-content p a {
+  font-family: "Merriweather";
+  font-size: 1.7vw;
+  text-decoration: none;
+  color: black;
+  background-image: linear-gradient(180deg, transparent 65%, #fcf113 0);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease;
+}
+.the-latest .the-latest-content .latest-text-content p a:hover {
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.the-latest .latest-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 8vh;
+  padding-bottom: 20vh;
+}
+.the-latest .latest-bottom .latest-bottom-content {
+  width: 27.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-image-content-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/the-latest-1.jpg");
+  background-size: 180%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;
+  width: 24vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-image-content-1:hover {
+  background-size: 190%;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-image-content-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/the-latest-2.jpg");
+  background-size: 162%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;
+  width: 24vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-image-content-2:hover {
+  background-size: 172%;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-text-content-bottom {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 24vw;
+  margin-top: 4vh;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-text-content-bottom .blog {
+  color: #8C9090;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-text-content-bottom .author {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-text-content-bottom p {
+  margin-top: 2vh;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-text-content-bottom p a {
+  font-family: "Merriweather";
+  font-size: 1.7vw;
+  text-decoration: none;
+  color: black;
+  background-image: linear-gradient(180deg, transparent 65%, #fcf113 0);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-text-content-bottom p a:hover {
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-text-content-bottom .p-1 {
+  padding-bottom: 8vh;
+  border-bottom: 0.6vh solid black;
+}
+.the-latest .latest-bottom .latest-bottom-content .latest-text-content-bottom .p-2 {
+  padding-bottom: 3.7vh;
+  border-bottom: 0.6vh solid black;
+}
+
+.the-latest-text:hover {
+  background-color: #262c30;
+}
+.the-latest-text:hover span {
+  color: white;
+}
+
+.most-read {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 3.4vw;
+}
+.most-read .most-read-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: yellow;
+  width: 24.5vw;
+  height: 6vh;
+  margin-left: 0.5vw;
+  user-select: none;
+}
+.most-read .most-read-text span {
+  color: black;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+}
+.most-read .most-read-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f4f6;
+  width: 24.5vw;
+  margin-left: 0.5vw;
+}
+.most-read .most-read-container .most-read-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  min-height: 20vh;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  border-bottom: 2px solid #d8dde0;
+}
+.most-read .most-read-container .most-read-content .number span {
+  font-family: "GFS Didot", serif;
+  font-size: 5.64vw;
+}
+.most-read .most-read-container .most-read-content .author-title {
+  margin-left: 1vw;
+}
+.most-read .most-read-container .most-read-content .author-title .author .blog {
+  color: #8C9090;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+}
+.most-read .most-read-container .most-read-content .author-title .author span {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+}
+.most-read .most-read-container .most-read-content .author-title .title {
+  margin-top: 1vh;
+}
+.most-read .most-read-container .most-read-content .author-title .title a {
+  font-family: "Merriweather";
+  font-size: 1.2vw;
+  text-decoration: none;
+  color: black;
+  background-image: linear-gradient(180deg, transparent 65%, #fcf113 0);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease;
+}
+.most-read .most-read-container .most-read-content .author-title .title a:hover {
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bottom-container .editor-pics-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: yellow;
+  width: 80vw;
+  height: 6vh;
+  user-select: none;
+}
+.bottom-container .editor-pics-text span {
+  color: black;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+}
+
+.editor-pics-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.5vw;
+  margin-left: 1.05vw;
+}
+
+.editor-pics {
+  margin-top: 5vh;
+}
+
+.editor-image-content-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-1.png");
+  background-size: 103%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-1:hover {
+  background-size: 120%;
+}
+
+.editor-image-content-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-2.png");
+  background-size: 103%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-2:hover {
+  background-size: 120%;
+}
+
+.editor-image-content-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-3.png");
+  background-size: 168%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-3:hover {
+  background-size: 180%;
+}
+
+.editor-image-content-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-4.png");
+  background-size: 115%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-4:hover {
+  background-size: 120%;
+}
+
+.editor-image-content-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-5.png");
+  background-size: 112%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-5:hover {
+  background-size: 120%;
+}
+
+.editor-image-content-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-6.png");
+  background-size: 111%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-6:hover {
+  background-size: 122%;
+}
+
+.editor-author-title-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 24vw;
+  margin-top: 4vh;
+}
+.editor-author-title-content .blog {
+  color: #8C9090;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+}
+.editor-author-title-content .author {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+}
+.editor-author-title-content p {
+  margin-top: 2vh;
+}
+.editor-author-title-content p a {
+  font-family: "Merriweather";
+  font-size: 1.7vw;
+  text-decoration: none;
+  color: black;
+  background-image: linear-gradient(180deg, transparent 65%, #fcf113 0);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease;
+}
+.editor-author-title-content p a:hover {
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.editor-author-title-content .p-1 {
+  padding-bottom: 7.9vh;
+  border-bottom: 0.6vh solid black;
+}
+.editor-author-title-content .p-2 {
+  padding-bottom: 3.56vh;
+  border-bottom: 0.6vh solid black;
+}
+
+footer {
+  background-color: #262C30;
+  height: 90vh;
+  padding-top: 10vh;
+}
+footer .top-footer {
+  display: flex;
+  justify-content: space-around;
+}
+footer .top-footer .say-hello a {
+  font-family: "Merriweather";
+  color: white;
+  font-size: 6vw;
+  text-decoration: none;
+}
+footer .top-footer .say-hello a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+footer .top-footer .socmed {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 20vw;
+  padding-bottom: 2vh;
+}
+footer .top-footer .socmed .socmed-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .top-footer .socmed svg {
+  fill: white;
+  width: 2rem;
+  height: 2rem;
+}
+footer .top-footer .socmed span:before {
+  position: absolute;
+  content: "•";
+  color: yellow;
+  line-height: 1;
+  font-size: 1.2vw;
+  display: none;
+  right: 50%;
+  transform: translateX(50%);
+}
+footer .top-footer .socmed-icon:hover svg {
+  fill: yellow;
+}
+footer .top-footer .socmed-icon:hover span:before {
+  display: block;
+}
+footer .middle-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+footer .middle-footer .locations {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .middle-footer .locations .all-locations {
+  display: flex;
+  justify-content: center;
+}
+footer .middle-footer .locations .all-locations .locations-type {
+  display: flex;
+  flex-direction: column;
+}
+footer .middle-footer .network {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .middle-footer .network .all-networks {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .middle-footer .jobs .jobs-desc span {
+  font-family: "Merriweather";
+  font-style: italic;
+  font-size: 1vw;
+  font-weight: 600;
+  color: white;
+}
+footer .middle-footer .jobs .see-jobs span {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+  color: white;
+}
+footer .middle-footer a {
+  text-decoration: none;
+  color: white;
+  font-family: "Merriweather";
+}
+footer .middle-footer .text span {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.8vw;
+  color: white;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("../assets/fonts/Sora-Medium.ttf");
+}
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSansJP-Light.otf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=index.css.map */

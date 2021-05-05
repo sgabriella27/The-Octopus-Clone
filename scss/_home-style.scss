@@ -1,0 +1,801 @@
+::selection {
+  background: yellow;
+}
+
+::-webkit-scrollbar {
+  //width: 6px;
+  display: none;
+}
+//
+//::-webkit-scrollbar-track {
+//  background: white;
+//}
+//
+//::-webkit-scrollbar-thumb {
+//  background: black;
+//  border-radius: 1vw;
+//}
+//
+//::-webkit-scrollbar-thumb:hover {
+//  background: #555;
+//}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  img {
+    width: 5vw;
+  }
+
+  .register-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 0.3vw;
+    width: 8vw;
+    height: 5vh;
+
+    a {
+      color: white;
+      font-family: "Sora";
+      text-decoration: none;
+      text-decoration: none;
+    }
+  }
+}
+
+.register-button:hover {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 90.5vh;
+
+  .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 67vh;
+    z-index: -1;
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 40vw;
+    height: 25vh;
+
+    .octopus-title {
+      font-family: "Merriweather";
+      font-size: 4vw;
+    }
+
+    .octopus-text {
+      font-family: "Merriweather";
+      font-style: italic;
+      font-size: 1vw;
+      font-weight: 600;
+    }
+  }
+
+}
+
+.bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("../assets/images/topography.svg");
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+.category-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .category {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 0.2vw solid black;
+    border-bottom: 0.2vw solid black;
+    background-color: white;
+    height: 8vh;
+    width: 80vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 500;
+    }
+
+    a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0.9vh;
+      background: yellow;
+      transition: width .3s;
+      margin-top: -0.9vh;
+    }
+
+    a:hover::after {
+      width: 100%;
+      transition: width .3s;
+    }
+  }
+
+}
+
+.middle-container {
+  display: flex;
+  justify-content: center;
+}
+
+.the-latest {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+  width: 51.5vw;
+
+  .the-latest-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+    width: 51.5vw;
+    height: 6vh;
+    margin-bottom: 3vh;
+
+    span {
+      color: black;
+      font-family: "Work Sans",sans-serif;
+      font-weight: 500;
+    }
+  }
+
+  .the-latest-content {
+    width: 51.5vw;
+
+    .latest-image-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("../assets/images/the-latest.jpg");
+      background-size: 100%;
+      background-position: center;
+      height: 53vh;
+      transition: all 0.5s ease-in-out;
+      border-bottom: 1vh solid yellow;
+
+      &:hover {
+        background-size: 110%;
+      }
+    }
+
+    .latest-text-content {
+      margin-top: 2vh;
+      padding-bottom: 4vh;
+      border-bottom: 0.6vh solid black;
+
+      .blog {
+        color: #8C9090;
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 0.8vw;
+      }
+
+      .author {
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 0.8vw;
+      }
+
+      p {
+        margin-top: 2vh;
+        width: 35vw;
+
+        a {
+          font-family: "Merriweather";
+          font-size: 1.7vw;
+          text-decoration: none;
+          color: black;
+          background-image: linear-gradient(180deg, transparent 65%, #fcf113 0);
+          background-size: 0 100%;
+          background-repeat: no-repeat;
+          transition: background-size .4s ease;
+        }
+
+        a:hover {
+          background-size: 100% 100%;
+          cursor: pointer;
+        }
+      }
+
+    }
+
+  }
+
+  .latest-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+    padding-bottom: 20vh;
+
+    .latest-bottom-content {
+      width: 27.5vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .latest-image-content-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../assets/images/the-latest-1.jpg");
+        background-size: 180%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 40vh;
+        width: 24vw;
+        transition: background-size 0.5s ease-in-out;
+        border-bottom: 1vh solid yellow;
+
+        &:hover {
+          background-size: 190%;
+        }
+      }
+
+      .latest-image-content-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../assets/images/the-latest-2.jpg");
+        background-size: 162%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 40vh;
+        width: 24vw;
+        transition: background-size 0.5s ease-in-out;
+        border-bottom: 1vh solid yellow;
+
+        &:hover {
+          background-size: 172%;
+        }
+      }
+
+      .latest-text-content-bottom {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 24vw;
+        margin-top: 4vh;
+
+        .blog {
+          color: #8C9090;
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 0.8vw;
+        }
+
+        .author {
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 0.8vw;
+        }
+
+        p {
+          margin-top: 2vh;
+
+          a {
+            font-family: "Merriweather";
+            font-size: 1.7vw;
+            text-decoration: none;
+            color: black;
+            background-image: linear-gradient(180deg, transparent 65%, #fcf113 0);
+            background-size: 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size .4s ease;
+          }
+
+          a:hover {
+            background-size: 100% 100%;
+            cursor: pointer;
+          }
+        }
+
+        .p-1 {
+          padding-bottom: 8vh;
+          border-bottom: 0.6vh solid black;
+        }
+
+        .p-2 {
+          padding-bottom: 3.7vh;
+          border-bottom: 0.6vh solid black;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.the-latest-text:hover {
+  background-color: #262c30;
+
+  span {
+    color: white;
+  }
+}
+
+.most-read {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 3.4vw;
+
+  .most-read-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+    width: 24.5vw;
+    height: 6vh;
+    margin-left: 0.5vw;
+    user-select: none;
+
+    span {
+      color: black;
+      font-family: "Work Sans",sans-serif;
+      font-weight: 500;
+    }
+  }
+
+  .most-read-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f4f6;
+    width: 24.5vw;
+    margin-left: 0.5vw;
+
+    .most-read-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20vw;
+      min-height: 20vh;
+      padding-top: 3vh;
+      padding-bottom: 3vh;
+      border-bottom: 2px solid #d8dde0;
+
+      .number {
+
+        span {
+          font-family: 'GFS Didot', serif;
+          font-size: 5.64vw;
+        }
+      }
+
+      .author-title {
+        margin-left: 1vw;
+
+        .author {
+
+          .blog {
+            color: #8C9090;
+            font-family: "Montserrat";
+            font-weight: 700;
+            font-size: 0.8vw;
+          }
+
+          span {
+            font-family: "Montserrat";
+            font-weight: 700;
+            font-size: 0.8vw;
+          }
+        }
+
+        .title {
+          margin-top: 1vh;
+
+          a {
+            font-family: "Merriweather";
+            font-size: 1.2vw;
+            text-decoration: none;
+            color: black;
+            background-image: linear-gradient(180deg, transparent 65%, #fcf113 0);
+            background-size: 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size .4s ease;
+          }
+
+          a:hover {
+            background-size: 100% 100%;
+            cursor: pointer;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .editor-pics-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+    width: 80vw;
+    height: 6vh;
+    user-select: none;
+
+    span {
+      color: black;
+      font-family: "Work Sans",sans-serif;
+      font-weight: 500;
+    }
+
+  }
+
+}
+
+.editor-pics-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.5vw;
+  margin-left: 1.05vw;
+}
+
+.editor-pics {
+  margin-top: 5vh;
+}
+
+.editor-image-content-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-1.png");
+  background-size: 103%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-1:hover {
+  background-size: 120%;
+}
+
+.editor-image-content-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-2.png");
+  background-size: 103%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-2:hover {
+  background-size: 120%;
+}
+
+.editor-image-content-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-3.png");
+  background-size: 168%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-3:hover {
+  background-size: 180%;
+}
+
+.editor-image-content-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-4.png");
+  background-size: 115%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-4:hover {
+  background-size: 120%;
+}
+
+.editor-image-content-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-5.png");
+  background-size: 112%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-5:hover {
+  background-size: 120%;
+}
+
+.editor-image-content-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/editor-picks-6.png");
+  background-size: 111%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+  width: 23vw;
+  transition: background-size 0.5s ease-in-out;
+  border-bottom: 1vh solid yellow;
+}
+
+.editor-image-content-6:hover {
+  background-size: 122%;
+}
+
+.editor-author-title-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 24vw;
+  margin-top: 4vh;
+
+  .blog {
+    color: #8C9090;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 0.8vw;
+  }
+
+  .author {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 0.8vw;
+  }
+
+  p {
+    margin-top: 2vh;
+
+    a {
+      font-family: "Merriweather";
+      font-size: 1.7vw;
+      text-decoration: none;
+      color: black;
+      background-image: linear-gradient(180deg, transparent 65%, #fcf113 0);
+      background-size: 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size .4s ease;
+    }
+
+    a:hover {
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
+  }
+
+  .p-1 {
+    padding-bottom: 7.9vh;
+    border-bottom: 0.6vh solid black;
+  }
+
+  .p-2 {
+    padding-bottom: 3.56vh;
+    border-bottom: 0.6vh solid black;
+  }
+
+}
+
+footer {
+  background-color: #262C30;
+  height: 90vh;
+  padding-top: 10vh;
+
+  .top-footer {
+    display: flex;
+    justify-content: space-around;
+
+    .say-hello {
+
+      a {
+        font-family: "Merriweather";
+        color: white;
+        font-size: 6vw;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: yellow;
+        text-decoration: underline;
+      }
+    }
+
+
+    .socmed {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      width: 20vw;
+      padding-bottom: 2vh;
+
+      .socmed-icon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      svg {
+        fill: white;
+        width: 2rem;
+        height: 2rem;
+      }
+
+      span:before {
+        position: absolute;
+        content: "\2022";
+        color: yellow;
+        line-height: 1;
+        font-size: 1.2vw;
+        display: none;
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+    }
+
+    .socmed-icon:hover svg {
+      fill: yellow;
+    }
+
+    .socmed-icon:hover span:before {
+      display: block;
+    }
+  }
+
+  .middle-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+
+    .locations {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .all-locations {
+        display: flex;
+        justify-content: center;
+
+        .locations-type {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+    }
+
+    .network {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .all-networks {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+    }
+
+    .jobs {
+
+      .jobs-desc {
+        span {
+          font-family: "Merriweather";
+          font-style: italic;
+          font-size: 1vw;
+          font-weight: 600;
+          color: white;
+        }
+      }
+
+      .see-jobs {
+        span {
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 0.8vw;
+          color: white;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-family: "Merriweather";
+    }
+
+    .text {
+
+      span {
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 0.8vw;
+        color: white;
+      }
+    }
+
+  }
+
+}
