@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap");
+@font-face {
+  font-family: "Sora";
+  src: url("../assets/fonts/Sora-Medium.ttf");
+}
+@font-face {
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSansJP-Light.otf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: yellow;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+nav .logo a {
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: bolder;
+  font-size: 1.4vw;
+  letter-spacing: 0.1vw;
+}
+nav .register-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 0.3vw;
+  width: 8vw;
+  height: 5vh;
+}
+nav .register-button a {
+  color: white;
+  font-family: "Sora";
+  text-decoration: none;
+  text-decoration: none;
+}
+
+.register-button:hover {
+  cursor: pointer;
+}
+
+.background-regis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/bg-regis.jpg");
+  background-size: cover;
+  height: 90vh;
+}
+.background-regis .regis-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  height: 73vh;
+  background-color: white;
+  border-radius: 0.25vw;
+  box-shadow: 0.2vw 0.2vh 1vw 0.1vw #262c30;
+}
+.background-regis .regis-box .octopus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 70vh;
+}
+.background-regis .regis-box .octopus img {
+  width: 28vw;
+  animation: mover 4s infinite alternate;
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1.5vh);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1.5vh);
+  }
+}
+.background-regis .regis-box .regis-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30vw;
+  height: 70vh;
+}
+.background-regis .regis-box .regis-form .sign-up {
+  margin-bottom: 4vh;
+}
+.background-regis .regis-box .regis-form .sign-up span {
+  font-family: "Sora";
+  font-weight: 600;
+  color: #262c30;
+  font-size: 2.5vw;
+  background-color: yellow;
+}
+.background-regis .regis-box .regis-form .component {
+  display: flex;
+  justify-content: space-around;
+  height: 8vh;
+  flex-direction: column;
+  margin-bottom: 2vh;
+}
+.background-regis .regis-box .regis-form .component label {
+  font-family: "Sora";
+  font-weight: 400;
+  color: #262c30;
+  font-size: 0.85vw;
+}
+.background-regis .regis-box .regis-form .component input {
+  border-radius: 0.2vw;
+  height: 4vh;
+  width: 25.5vw;
+  border: 1px solid black;
+  padding-left: 0.5vw;
+}
+.background-regis .regis-box .regis-form .component input:focus {
+  outline: none;
+}
+.background-regis .regis-box .regis-form .name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2vh;
+  width: 25.5vw;
+}
+.background-regis .regis-box .regis-form .name .first-name {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 7vh;
+}
+.background-regis .regis-box .regis-form .name .last-name {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 7vh;
+}
+.background-regis .regis-box .regis-form .name label {
+  font-family: "Sora";
+  font-weight: 400;
+  color: #262c30;
+  font-size: 0.85vw;
+}
+.background-regis .regis-box .regis-form .name input {
+  border-radius: 0.2vw;
+  height: 4vh;
+  border: 1px solid black;
+  padding-left: 0.5vw;
+}
+.background-regis .regis-box .regis-form .name input:focus {
+  outline: none;
+}
+.background-regis .regis-box .regis-form .terms {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  width: 15vw;
+}
+.background-regis .regis-box .regis-form .terms label {
+  font-family: "Sora";
+  font-weight: 400;
+  color: #262c30;
+  font-size: 0.7vw;
+}
+.background-regis .regis-box .regis-form .terms span {
+  background-color: yellow;
+}
+.background-regis .regis-box .regis-form .regis-btn {
+  margin-top: 2vh;
+}
+.background-regis .regis-box .regis-form .regis-btn button {
+  font-family: "Sora";
+  height: 5vh;
+  background-color: #262C30;
+  color: white;
+  border: none;
+  border-radius: 0.2vw;
+  width: 25.5vw;
+}
+.background-regis .regis-box .regis-form .regis-btn button:hover {
+  background-color: white;
+  border: 1px solid #262C30;
+  color: #262C30;
+  cursor: pointer;
+}
+.background-regis .regis-box .regis-form .log-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25.5vw;
+  margin-top: 2vh;
+}
+.background-regis .regis-box .regis-form .log-in span {
+  font-family: "Sora";
+  font-size: 0.8vw;
+}
+.background-regis .regis-box .regis-form .log-in a {
+  text-decoration: none;
+  color: #262C30;
+  font-size: 0.8vw;
+  background-color: yellow;
+}
+
+/*# sourceMappingURL=register.css.map */

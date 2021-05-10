@@ -1,0 +1,93 @@
+::selection {
+  background: yellow;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container-detail-2 {
+  background-color: #f0f4f6;
+}
+
+.post-cover-detail-2 {
+
+  .cover-detail-2 {
+    margin-bottom: 0;
+    height: 90vh;
+
+    .blog-cover-detail-2 {
+      position: absolute;
+      background-image: url("../assets/images/the-latest-1.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      width: 100%;
+      -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 85%);
+      clip-path: polygon(0 0,100% 0,100% 100%,0 85%);
+    }
+  }
+}
+
+.content-detail-2 {
+  position: relative;
+  padding-bottom: 5vh;
+
+  .blog-title-detail-2 {
+    width: 60%;
+    margin-top: -20vh;
+
+    span {
+      display: inline;
+      background-color: black;
+      color: white;
+      font-family: "Merriweather";
+      font-weight: lighter;
+      font-size: 5.7vw;
+      padding-left: 5vw;
+      padding-right: 1vw;
+      -webkit-box-decoration-break: clone;
+    }
+
+  }
+
+  .desc-container-detail-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .desc-content-detail-2 {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 7vh;
+      width: 65vw;
+
+      .blog-author-detail-2 {
+        margin-bottom: 2vh;
+
+        .date-detail-2 {
+          color: #8C9090;
+          font-family: "Montserrat";
+          font-weight: 600;
+          font-size: 0.8vw;
+          margin-right: 1vw;
+        }
+
+        span {
+          font-family: "Montserrat";
+          font-weight: 600;
+          font-size: 0.8vw;
+        }
+      }
+
+      .blog-description-detail-2 {
+        font-family: "Merriweather";
+        color: #262c30;
+        font-size: 1.5vw;
+        word-spacing: 0.1vw;
+        line-height: 5vh;
+      }
+    }
+  }
+}

@@ -3,22 +3,8 @@
 }
 
 ::-webkit-scrollbar {
-  //width: 6px;
   display: none;
 }
-//
-//::-webkit-scrollbar-track {
-//  background: white;
-//}
-//
-//::-webkit-scrollbar-thumb {
-//  background: black;
-//  border-radius: 1vw;
-//}
-//
-//::-webkit-scrollbar-thumb:hover {
-//  background: #555;
-//}
 
 nav {
   display: flex;
@@ -30,8 +16,15 @@ nav {
   top: 0;
   z-index: 1;
 
-  img {
-    width: 5vw;
+  .logo {
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: "Montserrat";
+      font-weight: bolder;
+      font-size: 1.4vw;
+      letter-spacing: 0.1vw;
+    }
   }
 
   .register-button {
@@ -46,7 +39,6 @@ nav {
     a {
       color: white;
       font-family: "Sora";
-      text-decoration: none;
       text-decoration: none;
     }
   }
@@ -167,7 +159,6 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  user-select: none;
   width: 51.5vw;
 
   .the-latest-text {
@@ -375,7 +366,6 @@ header {
     width: 24.5vw;
     height: 6vh;
     margin-left: 0.5vw;
-    user-select: none;
 
     span {
       color: black;
@@ -471,7 +461,6 @@ header {
     background: yellow;
     width: 80vw;
     height: 6vh;
-    user-select: none;
 
     span {
       color: black;
@@ -665,6 +654,7 @@ footer {
     grid-template-columns: repeat(12, 1fr);
 
     .say-hello {
+      user-select: none;
       grid-column: span 8;
 
       a {
@@ -900,7 +890,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 20vh;
+    height: 16vh;
     margin-top: 7vh;
     border-top: 0.3vw solid #535e64;
 
